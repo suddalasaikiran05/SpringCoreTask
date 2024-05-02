@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<bean name="student1" class="ch16.Application1.Student">
+		<constructor-arg name="name" value="ramcharan"/>
+		<constructor-arg name="roll" value="12"/>
+		<constructor-arg name="section" value="A"/>
+	</bean>
+    <bean name="university1" class="ch16.Application1.University">
+       	<property name="name" value="JNTU"/>
+		<property name="addres" value="Hyd"/>
+		<property name="phone" value="07070"/>
+		<property name="student" ref="student1"/>
+	</bean>
+</beans>
+         
